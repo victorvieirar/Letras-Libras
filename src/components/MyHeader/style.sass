@@ -1,0 +1,73 @@
+@import "../../styles/colors"
+@import "../../styles/mixins"
+
+#header
+  padding: 0 50px
+  width: 100%
+  display: flex
+  justify-content: space-between
+  background-color: $green
+
+  .nav
+    ul
+      list-style: none
+      display: flex
+
+      ul
+        .box
+          display: none
+          position: absolute
+          flex-direction: column
+          padding: 10px
+          align-items: flex-start
+          border-radius: 5px
+          margin: 30px 0 0 20px
+          background-color: $dark-green
+          
+          li 
+            margin: 5px
+            +transition(.1, ease-in-out)
+
+          li:hover
+            opacity: .85
+            +transition(.1, ease-in-out)
+
+          li::after 
+            display: none
+
+      li,
+      ul
+        display: flex
+        margin: 0 10px
+        align-items: center
+        flex-direction: column
+        text-transform: uppercase
+        font-size: .85rem
+        font-weight: 600
+        color: white
+        padding: 2.5px 0 0 0 
+
+      ul::after,
+      li::after
+        content: " "
+        border-bottom: 1.5px solid transparent
+        height: 2px
+        padding: 2.5px 0 0 0 
+
+      ul,
+      li:hover 
+        cursor: pointer
+
+      ul:hover
+        .box
+          display: flex
+      
+      ul
+        .box.hover
+          display: flex
+
+      ul:hover::after,
+      li:hover::after
+        content: " "
+        border-color: white
+        +underline-animation

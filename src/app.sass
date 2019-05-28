@@ -1,0 +1,57 @@
+@import "./styles/colors"
+  
+body
+  padding: 0
+  margin: 0
+
+*
+  box-sizing: border-box
+
+#app 
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color: #2c3e50
+  padding: 0
+  margin: 0
+
+#presentation
+  display: flex
+  flex-direction: column
+  padding: 80px 50px 30px 50px
+
+span.title
+  display: flex
+  flex-direction: column
+  font-weight: 700
+  text-transform: uppercase
+  color: $green
+  font-size: 1.3rem
+
+span.title::after
+  content: " "
+  margin-top: 10px
+  height: 3px
+  background-color: $green
+  border-radius: 1.5px
+  width: 50px
+
+p.content 
+  width: 60%
+  color: $dark-gray
+  font-weight: 500
+
+span.highlight 
+  color: $green
+  font-weight: bold
+
+span.highlight-content 
+  font-weight: bold
+
+.small
+  font-size: .9rem
+
+a, 
+a.link 
+  text-decoration: none
+  color: $green

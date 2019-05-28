@@ -1,0 +1,17 @@
+#header
+  .logo
+  nav.nav
+    ul
+      li Apresentação
+      ul(@mouseover="isHover = true" @mouseleave="leave") Ensino
+        .box(:class="{ hover: isHover }")
+          li(@click="selectMenu(0)") Currículos
+          li Monografia
+          li Artigos
+          li Memoriais
+          li Outros
+          li Turmas
+      li Calendário
+      li Projeto Pedagógico do Curso
+      li Notícias
+      li Documentos
