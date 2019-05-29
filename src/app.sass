@@ -15,11 +15,6 @@ body
   padding: 0
   margin: 0
 
-#presentation
-  display: flex
-  flex-direction: column
-  padding: 80px 50px 30px 50px
-
 span.title
   display: flex
   flex-direction: column
@@ -55,3 +50,65 @@ a,
 a.link 
   text-decoration: none
   color: $green
+
+.page 
+  display: none
+  flex-direction: column
+  padding: 80px 50px 30px 50px
+
+.page.active
+  display: flex
+
+table
+  display: flex
+  flex-direction: column
+  margin: 20px 0 
+
+  thead
+    background-color: $green
+    font-weight: bold
+    color: white
+    padding: 5px 10px
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+
+  tbody
+    margin: 5px 0 0 0
+    tr
+      td
+        display: flex
+        flex-direction: column
+        padding: 5px 10px
+
+span.bold
+  font-weight: bold
+
+#fluxogram
+  img
+    width: 600px  
+    align-self: center
+    margin: 50px
+
+footer 
+  background-color: $dark-gray
+  color: white
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  padding: 80px 80px 40px 80px
+  align-items: flex-end
+
+  img
+    height: 60px
+  .copy 
+    text-transform: uppercase
+    letter-spacing: .5px
+    font-weight: 500
+    font-size: .7rem
+
+    a,
+    a:link
+      color: #dddddd
+
+    a:hover
+      opacity: .5

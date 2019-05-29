@@ -1,17 +1,22 @@
 #header
-  .logo
+  img.logo(src="../../assets/logo.white.svg")
   nav.nav
     ul
-      li Apresentação
-      ul(@mouseover="isHover = true" @mouseleave="leave") Ensino
-        .box(:class="{ hover: isHover }")
-          li(@click="selectMenu(0)") Currículos
-          li Monografia
-          li Artigos
-          li Memoriais
-          li Outros
-          li Turmas
-      li Calendário
-      li Projeto Pedagógico do Curso
-      li Notícias
-      li Documentos
+      li(@click="selectMenu(0)") Apresentação
+      ul(@mouseover="isHover1 = true" @mouseleave="leave()") Ensino
+        .box(:class="{ hover: isHover1 }")
+          li(@click="selectMenu(1)") Currículos
+          li(@click="selectMenu(2)") Monografia
+          li(@click="selectMenu(3)") Artigos
+          li(@click="selectMenu(4)") Memoriais
+          li(@click="selectMenu(5)") Outros
+          li(@click="selectMenu(6)") Turmas
+          li(@click="selectMenu(7)") Corpo Docente
+          li(@click="selectMenu(13)") Fluxograma do Curso
+      li(@click="selectMenu(8)") Calendário
+      li(@click="selectMenu(9)") Projeto Pedagógico do Curso
+      li(@click="selectMenu(10)") Notícias
+      ul(@mouseover="isHover2 = true" @mouseleave="leave()") Documentos
+        .box(:class="{hover: isHover2}")
+          li(@click="selectMenu(11)") Formulários
+          li(@click="selectMenu(12)") Outros
